@@ -11,6 +11,14 @@
   </head>
 
   <body>
+    <header>
+    <ul>
+      <li class = "left"><%=link_to "投稿一覧",posts_path%>
+      <li class = "left"><%=link_to "投稿する",new_post_path%>
+    </ul>
+    </header>
+
+    <h1>星ログ</h1>
     <%= yield %>
   </body>
 </html>
