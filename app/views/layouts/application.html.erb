@@ -11,14 +11,31 @@
   </head>
 
   <body>
-    <header>
-    <ul>
-      <li class = "left"><%=link_to "投稿一覧",posts_path%>
-      <li class = "left"><%=link_to "投稿する",new_post_path%>
-    </ul>
-    </header>
+    <div class = "container">
+      <header class = "header clearfix">
+        <nav>
+          <ul class = "top_menu clearfix">
+            <li class = "right"><%=link_to "投稿一覧",posts_path%>
+            <li class = "right"><%=link_to "投稿する",new_post_path%>
+          </ul>
+        </nav>
+      </header>
 
-    <h1>星ログ</h1>
-    <%= yield %>
+      <div class="image_container">
+        <%=image_tag "galaxy2.jpg", class: "image_area"%>
+        <h1 class="centered_text">星ログ</h1>
+      </div>
+
+      <section class = "main-header">
+      
+      </section>
+
+    
+      <%= yield %>
+
+      <footer class="footer">
+          <p>Copyright ©2023 starlog.</p>
+      </footer>
+    </div>
   </body>
 </html>
