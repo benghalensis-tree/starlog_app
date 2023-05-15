@@ -13,11 +13,6 @@ class PostsController < ApplicationController
     @post.save
   end
 
-  def show
-  end
-
-  def destroy
-  end
 
   private
 
