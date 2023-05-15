@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
 
-<header>
-  
-</header>
+<head>
+</head>
 
 <body>
-<h1>星ログ</h1>
-<%= form_with(model: @post,local: true) do |form| %>
+  <header>
+    <ul>
+      <li class = "left"><%=link_to "投稿一覧",posts_path%>
+      <li class = "left"><%=link_to "投稿する",posts_path%>
+    </ul>
+  </header>
 
-<%= form.label :"コメント"%>
-<%= form.text_field :content%>
-<%= form.submit%>
-<% end %>
+  <h1>星ログ</h1>
+  <%= form_with(model: @post,local: true) do |form| %>
+  <%= form.label :"コメント"%>
+  <%= form.text_field :content%>
+  <%= form.submit%>
+  <% end %>
+  <fotter>
 
 </body>
-
 </html>
 
 
