@@ -15,6 +15,7 @@ body{
   margin: 0 auto;
   position:relative;
   min-height: 100%;
+  padding-bottom: 100px;
 }
 
 .header{
@@ -81,6 +82,11 @@ ul.top_menu{
   width: 100%;
 }
 
+h1{
+  color:#FFF;
+  text-align: center;
+
+}
 
 
 .content{
@@ -94,6 +100,16 @@ ul.top_menu{
 }
 .timestamps{
   color:#FFF;
+}
+
+.new_area{
+  background-color:#4D4D4D;
+  margin-bottom: 20px;
+  font-size:2rem;
+  color:#fff;
+  text-decoration: none;
+  display: block;
+  padding: 5rem;
 }
 
 
