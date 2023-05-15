@@ -1,5 +1,11 @@
-<% @posts.each do |post|%>
+<div class = "content_area">
 
-<p><%= post.created_at%></p>
-<p><%= post.content%></p>
-<%end%>
+  <ul>
+    
+    <% @posts.each do |post|%>
+
+    <li class = timestamps><%= post.created_at%></li>
+    <li class = content><%= post.content%></li>
+    <%end%>
+  </ul>
+</div>
