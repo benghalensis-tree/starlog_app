@@ -13,6 +13,10 @@ class PostsController < ApplicationController
     @post.save
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
 
   private
   
@@ -20,8 +24,7 @@ class PostsController < ApplicationController
     params.require(:post).permit(:content)
   end
 
-  def show
-  end
+  
 
 
 
