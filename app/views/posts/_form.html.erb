@@ -1,8 +1,12 @@
 <div class = area>
   <%= form_with(model: @post,local: true, url: choose_new_or_edit) do |form| %>
-  <p><%= form.label :"コメント"%></p>
-  <p><%= form.text_field :content%></p>
-  <p><%= form.submit%></p>
+    <% if @post.errors.any?%>
+      <h2>error: 0〜140字で入力してください。</h2>
+    <% end %>
+    
+    <p><%= form.label :"コメント"%></p>
+    <p><%= form.text_field :content%></p>
+    <p><%= form.submit%></p>
   <% end %>
 
 </div>
