@@ -1,4 +1,9 @@
 <h1> 詳細</h1>
 
-<p class = show_area>投稿日:<%= @post.created_at %></p>
-<p class = show_area>コメント:<%= @post.content %></p>
+<ul class = show_area>
+
+  <li>投稿日:<%= @post.created_at %></li>
+  <li>コメント:<%= @post.content %></li>
+  <li><%=link_to "編集" ,edit_post_path(@post.id)%></li>
+
+</ul>
