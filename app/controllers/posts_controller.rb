@@ -10,7 +10,15 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.save
+    if params[:back]
+      render:new
+    else
+      if @post.save
+        redirect_to posts_path
+      else
+        render:new
+      end
+    end
   end
 
   def show
@@ -24,7 +32,11 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     @post.update(post_params)
-    
+  end
+  
+  def confirm
+    @post = Post.new(post_params)
+    render :new if @post.invalid?
   end
 
   def destroy

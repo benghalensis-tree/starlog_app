@@ -1,0 +1,10 @@
+<h1>以下の内容で送信する<h1>
+<div class = area>
+<%= form_with(model: @post, local:true) do |form|%>
+<%= form.hidden_field :content%>
+
+<p>コメント:<%= @post.content%></p>
+<%= form.submit "登録する"%>
+<%= form.submit "戻る",name:'back'%>
+<% end %>
+</div>
